@@ -1,0 +1,17 @@
+<ActionBar title="Resources"></ActionBar>
+
+<ScrollView>
+  <StackLayout class="p-4">
+    <Label text="Sensory Processing in Autism" class="text-lg font-bold mb-2"></Label>
+    <Label text="Sensory processing differences are common in autism. This can include being over- or under-sensitive to sensory input like sounds, lights, textures, and more." textWrap="true" class="mb-4"></Label>
+
+    <Label text="Useful Links:" class="text-lg font-bold mb-2"></Label>
+    <StackLayout *ngFor="let resource of resources" class="mb-2">
+      <Button [text]="resource.name" (tap)="openWebsite(resource.url)" class="btn btn-outline"></Button>
+    </StackLayout>
+
+    <Label text="Sign up for our newsletter:" class="text-lg font-bold mt-4 mb-2"></Label>
+    <TextField hint="Enter your email" class="mb-2"></TextField>
+    <Button text="Subscribe" (tap)="signUpNewsletter()" class="btn btn-primary"></Button>
+  </StackLayout>
+</ScrollView>

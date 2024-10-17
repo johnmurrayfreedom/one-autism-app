@@ -1,0 +1,17 @@
+<ActionBar title="Sensory Overload Tracker"></ActionBar>
+
+<ScrollView>
+  <StackLayout class="p-4">
+    <Label text="Select Triggers:" class="text-lg font-bold mb-2"></Label>
+    <StackLayout *ngFor="let trigger of triggers" class="mb-2">
+      <CheckBox [text]="trigger.name" [(ngModel)]="trigger.isSelected"></CheckBox>
+    </StackLayout>
+    
+    <StackLayout class="mb-4">
+      <TextField [(ngModel)]="customTrigger" hint="Add custom trigger" class="mb-2"></TextField>
+      <Button text="Add Trigger" (tap)="addCustomTrigger()" class="btn btn-outline"></Button>
+    </StackLayout>
+    
+    <Button text="Log Overload" (tap)="logOverload()" class="btn btn-primary"></Button>
+  </StackLayout>
+</ScrollView>

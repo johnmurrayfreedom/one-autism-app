@@ -1,0 +1,35 @@
+<ActionBar title="One Autism" class="action-bar">
+  <Label text="One Autism" class="action-bar-title"></Label>
+</ActionBar>
+
+<ScrollView>
+  <GridLayout rows="auto, *" class="p-4">
+    <Label row="0" text="Welcome to One Autism" class="text-2xl font-bold mb-4 text-center"></Label>
+    <GridLayout row="1" columns="*, *, *" rows="auto, auto" class="m-t-20">
+      <StackLayout row="0" col="0" class="feature-card" (tap)="navigateTo('/sensory-tracker')">
+        <Label text="📊" class="icon text-center"></Label>
+        <Label text="Sensory Tracker" textWrap="true" class="text-center"></Label>
+      </StackLayout>
+      <StackLayout row="0" col="1" class="feature-card" (tap)="navigateTo('/calming-exercises')">
+        <Label text="🧘" class="icon text-center"></Label>
+        <Label text="Calming Exercises" textWrap="true" class="text-center"></Label>
+      </StackLayout>
+      <StackLayout row="0" col="2" class="feature-card" (tap)="navigateTo('/visual-stimuli')">
+        <Label text="🖼️" class="icon text-center"></Label>
+        <Label text="Visual Stimuli" textWrap="true" class="text-center"></Label>
+      </StackLayout>
+      <StackLayout row="1" col="0" class="feature-card" (tap)="navigateTo('/sound-player')">
+        <Label text="🎵" class="icon text-center"></Label>
+        <Label text="Sound Player" textWrap="true" class="text-center"></Label>
+      </StackLayout>
+      <StackLayout row="1" col="1" class="feature-card" (tap)="navigateTo('/quick-tips')">
+        <Label text="💡" class="icon text-center"></Label>
+        <Label text="Quick Tips" textWrap="true" class="text-center"></Label>
+      </StackLayout>
+      <StackLayout row="1" col="2" class="feature-card" (tap)="navigateTo('/resources')">
+        <Label text="📚" class="icon text-center"></Label>
+        <Label text="Resources" textWrap="true" class="text-center"></Label>
+      </StackLayout>
+    </GridLayout>
+  </GridLayout>
+</ScrollView>

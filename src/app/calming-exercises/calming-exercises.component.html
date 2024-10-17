@@ -1,0 +1,12 @@
+<ActionBar title="Calming Exercises"></ActionBar>
+
+<ScrollView>
+  <StackLayout class="p-4">
+    <Label text="Choose an exercise:" class="text-lg font-bold mb-4"></Label>
+    <StackLayout *ngFor="let exercise of exercises" class="mb-4">
+      <Label [text]="exercise.name" class="text-md font-bold"></Label>
+      <Label [text]="exercise.description" textWrap="true" class="mb-2"></Label>
+      <Button [text]="'Start ' + exercise.name" (tap)="startExercise(exercise.name)" class="btn btn-primary"></Button>
+    </StackLayout>
+  </StackLayout>
+</ScrollView>

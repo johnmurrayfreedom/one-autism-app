@@ -1,0 +1,16 @@
+<ActionBar title="Sound Player"></ActionBar>
+
+<StackLayout class="p-4">
+  <ListView [items]="sounds" class="mb-4">
+    <ng-template let-sound="item">
+      <Label [text]="sound.name" (tap)="playSound(sound)" class="p-2"></Label>
+    </ng-template>
+  </ListView>
+
+  <StackLayout *ngIf="currentSound" class="mb-4">
+    <Label [text]="'Now Playing: ' + currentSound.name" class="text-lg font-bold mb-2"></Label>
+    <Button [text]="isPlaying ? 'Pause' : 'Play'" (tap)="togglePlayPause()" class="btn btn-primary mb-2"></Button>
+    <Slider [value]="duration" (valueChange)="setDuration($event.value)" minValue="0" maxValue="60" class="mb-2"></Slider>
+    <Label [text]="'Duration: ' + duration + ' minutes'" class="text-center"></Label>
+  </StackLayout>
+</StackLayout>

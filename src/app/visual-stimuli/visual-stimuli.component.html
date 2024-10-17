@@ -1,0 +1,12 @@
+<ActionBar title="Visual Stimuli"></ActionBar>
+
+<ScrollView>
+  <GridLayout columns="*, *" rows="auto, auto" class="p-4">
+    <StackLayout *ngFor="let visual of visuals; let i = index" 
+                 [col]="i % 2" [row]="i < 2 ? 0 : 1" 
+                 class="m-2">
+      <Image [src]="visual.source" stretch="aspectFill" height="150" (tap)="selectVisual(visual.name)"></Image>
+      <Label [text]="visual.name" class="text-center"></Label>
+    </StackLayout>
+  </GridLayout>
+</ScrollView>

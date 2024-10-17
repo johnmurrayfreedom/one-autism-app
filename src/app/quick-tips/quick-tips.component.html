@@ -1,0 +1,6 @@
+<ActionBar title="Quick Tips"></ActionBar>
+
+<StackLayout class="p-4">
+  <Label [text]="currentTip" textWrap="true" class="text-lg mb-4"></Label>
+  <Button text="Show Another Tip" (tap)="showRandomTip()" class="btn btn-primary"></Button>
+</StackLayout>

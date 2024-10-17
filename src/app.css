@@ -1,0 +1,52 @@
+@import '~@nativescript/theme/css/core.css';
+@import '~@nativescript/theme/css/default.css';
+@import '~@nativescript/theme/css/blue.css';
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 10;
+  padding: 16;
+  margin: 8;
+  elevation: 4;
+  vertical-align: center;
+}
+
+.action-bar {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+
+.action-bar-title {
+  font-size: 18;
+  font-weight: bold;
+  text-align: center;
+}
+
+Page {
+  background-color: #f0f4f8;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  border-radius: 5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon {
+  font-size: 24;
+  margin-bottom: 8;
+}
+
+/* Responsive layout adjustments */
+@media (min-width: 600) {
+  .feature-card {
+    padding: 24;
+  }
+
+  .icon {
+    font-size: 32;
+  }
+}
